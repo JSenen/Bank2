@@ -88,11 +88,20 @@ input {
 
 form {
     margin: 25px auto;
-    padding: 20px;
+    padding: 10px;
     border: 5px solid #ccc;
-    width: 500px;
+    width: 300px;
     background: #eee;
 }
+.form-email {
+    margin: 25px auto;
+    padding: 10px;
+    border: 5px solid #ccc;
+    width: 300px;
+    height: 400px;
+    background: #eee;
+}
+
 
 div.form-element {
     margin: 20px 0;
@@ -120,6 +129,10 @@ p.error {
 p.error {
     background: orangered;
 }
+span.error {
+    color: #ee0d0d;
+    font-size: large;
+}
 p.success {
     background: #2f541b;
 }
@@ -146,6 +159,13 @@ table {
 th, td {
     font-size: large;
 }
+.validate_form_message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
 
 .footer--container {
