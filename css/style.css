@@ -120,6 +120,16 @@ p.error {
 p.error {
     background: orangered;
 }
+p.success {
+    background: #2f541b;
+}
+
+.message_login {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
 
 
 .footer--container {
