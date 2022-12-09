@@ -159,6 +159,12 @@ table {
 th, td {
     font-size: large;
 }
+.credit {
+    color: #1f839c;
+}
+.withdraw {
+    color: #ee0d0d;
+}
 .validate_form_message{
     display: flex;
     justify-content: center;

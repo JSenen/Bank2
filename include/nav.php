@@ -1,7 +1,8 @@
 <?php
-session_start();
+session_start();  //Inicio de sesion usuario
 
 ?>
+<!-- NAVEGADOR DE PAGINA HTML -->
 <nav class="navegacion">
         <a href="#" >Inicio</a>
         <a href="formemail.php" >Enviar Email</a>

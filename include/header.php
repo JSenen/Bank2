@@ -1,3 +1,4 @@
+<!-- CABECERA DE PAGINA HTML -->
 <!DOCTYPE html>
 <html lang="es">
 <head>

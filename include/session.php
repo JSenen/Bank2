@@ -7,6 +7,7 @@ $accounts = [new Account('ES3045678912','Debito', 1267.5),
     new Account('ES0937568235','Inversion',3487.67)];
 $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",$accounts);
 ?>
+<!-- FORMULARIO DE LOGIN -->
 <form method="post" action="" name="signin-form">
     <div class="form-element">
         <label>Username</label>

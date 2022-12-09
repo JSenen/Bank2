@@ -7,7 +7,7 @@ include './include/nav.php';    //Incluimos menu navegación
 
 //Al trabajar sin base de datos, usamos los mismos objetos que el inicio de sesion.
 $accounts = [new Account('ES3045678912','Debito', 1267.5),
-    new Account('ES0937568235','Inversion',3487.67)];
+    new Account('ES0937568235','Inversion',0.34)];
 $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",$accounts);
 ?>
 <div class="account_page">
@@ -24,10 +24,12 @@ $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",
                  <tr>
                      <td><?= $account-> accountnumber ?></td>
                      <td><?= $account->type ?></td>
-            <?php if ($account->getBalance() >= 0) { ?>
+            <?php if ($account->getBalance() >= 0) { //Si es mayor de 0 lo pinta verde
+                ?>
                      <td class="credit">
-                <?php } else { ?>
-                    <td class="overdrawn">
+                <?php } else {                        //Si no rojo
+                ?>
+                    <td class="withdraw">
                 <?php } ?>
                 $ <?= $account->getBalance() ?></td>
         </tr>
