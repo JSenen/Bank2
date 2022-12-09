@@ -1,4 +1,4 @@
-
+<!-- PIE DE PAGINA HTML -->
 <footer>
     <div class="footer">
         <div class="footer--container">
