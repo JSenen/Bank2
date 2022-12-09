@@ -5,6 +5,7 @@ include './domain/Account.php';
 
 include './include/header.php';
 include './include/nav.php';
+include './include/sendmail.php'; //Función para enviar email
 require './include/validate.php'; //Incluimos funcion validar
 
 
@@ -34,11 +35,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // Cuando se pulsa
     $errors['asunto']   = validate_asunto($user['asunto']) ? '': 'Introduzca un asunto';
     $errors['consulta'] = validate_consulta($user['consulta']) ? '': 'Introduzca consulta';
 
-    $invalid = implode($errors);                                  // Unimos los mensajes de error
-    if ($invalid) {                                               // Si hay errores
-        $message = 'Por favor rellene correctamente';  // No enviamos
-    } else {                                                     // Si no
-        $message = 'Los campos son correctos';                   // Datos validados
+    $invalid = implode($errors);                                   // Unimos los mensajes de error
+    if ($invalid) {                                                // Si hay errores
+        $message = 'Por favor rellene correctamente';              // No enviamos
+    } else {                                                       // Si no
+        $message = 'Los campos son correctos. Se envia mail';      // Datos validados se envia mail
+        $email = $_POST['email'];                                  //Recuperamos valores
+        $asunto = $_POST['asunto'];
+        $consulta = $_POST['consulta'];
+        sendmail($email,$asunto,$consulta);                        //Llamada a la función enviar mail
     }
 }
 ?>
@@ -47,20 +52,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // Cuando se pulsa
     <div class="form-element">
         <label>Email</label>
         <input type="text" name="email" />
-        <span class="error"><?= $errors['email'] ?></span><br>
+        <span class="error"><?= $errors['email'] ?></span><br> <!-- Linea para mostrar fallo validación -->
 
     </div>
     <div class="form-element">
         <label>Asunto</label>
         <input type="text" name="asunto"  />
-        <span class="error"><?= $errors['asunto'] ?></span><br>
+        <span class="error"><?= $errors['asunto'] ?></span><br> <!-- Linea para mostrar fallo validación -->
     </div>
     <div class="form-element">
         <label>Consulta</label>
         <div>
             <textarea  name="consulta" rows="5" cols="33">
             </textarea>
-            <span class="error"><?= $errors['consulta'] ?></span><br>
+            <span class="error"><?= $errors['consulta'] ?></span><br> <!-- Linea para mostrar fallo validación -->
 
         </div>
 
@@ -73,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // Cuando se pulsa
     </div>
 </div>
 
+?>
 <?php
 include "./include/footer.php";
 ?>
