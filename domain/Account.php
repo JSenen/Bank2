@@ -22,4 +22,37 @@ class Account
         return $this->balance;
     }
 
+    /**
+     * @return string
+     */
+    public function getAccountnumber(): string
+    {
+        return $this->accountnumber;
+    }
+
+    /**
+     * @param string $accountnumber
+     */
+    public function setAccountnumber(string $accountnumber): void
+    {
+        $this->accountnumber = $accountnumber;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType(string $type): void
+    {
+        $this->type = $type;
+    }
+
+
 }
