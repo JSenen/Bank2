@@ -2,8 +2,8 @@
 include './domain/Customer.php';
 include './domain/Account.php';
 
-include './include/header.php';
-include './include/nav.php';
+include './include/header.php'; //Incluimos cabecera
+include './include/nav.php';    //Incluimos menu navegación
 
 //Al trabajar sin base de datos, usamos los mismos objetos que el inicio de sesion.
 $accounts = [new Account('ES3045678912','Debito', 1267.5),
@@ -11,9 +11,7 @@ $accounts = [new Account('ES3045678912','Debito', 1267.5),
 $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",$accounts);
 ?>
 <div class="account_page">
-
-
-        <h2>Usuario Registrado: <b><?= $costumer1->getFullName() ?></b></h2>
+        <h2>Usuario Registrado: <b><?= $_SESSION['name'] ?></b></h2> <!-- //Obtenemos el usuario de la $_SESSION -->
         <div>
             <table>
                 <tr>

@@ -10,7 +10,7 @@ $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",
 <form method="post" action="" name="signin-form">
     <div class="form-element">
         <label>Username</label>
-        <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+        <input type="text" name="username" pattern="[a-zA-Z]+" required />
     </div>
     <div class="form-element">
         <label>Password</label>
@@ -26,14 +26,12 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
-
-
+    //Condicion usuario y password correspodan con los que tenemos
     if ($username == $costumer1->name && $password == $costumer1->password) {
         echo '<div class="message_login"><div><p class="success"><a href="account.php">LOGIN CORRECTO pulse aqui</a></p></div></div></p>';
         session_start(); //Inicio de sesion
         //Asociamos sesion al nombre de usuario
-        $_SESSION['name'] = $costumer1->name; //Damos nombre de usuario como valor de una campo de session
+        $_SESSION['name'] = $costumer1->getName(); //Damos nombre de usuario como valor de una campo de session
         setcookie('BANK2_COKKIE','',86400); //Establecemos una cokkie de 1 dia
     }else{
         session_write_close(); //Borramos sesiones anteriores

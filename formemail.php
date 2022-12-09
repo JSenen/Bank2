@@ -5,7 +5,7 @@ include './domain/Account.php';
 
 include './include/header.php';
 include './include/nav.php';
-require './include/validate.php';
+require './include/validate.php'; //Incluimos funcion validar
 
 
 //Al trabajar sin base de datos, usamos los mismos objetos que el inicio de sesion.
@@ -24,7 +24,7 @@ $errors = [                                                    // Inicializamos 
     'asunto'   => '',
     'consulta' => '',
 ];
-$message = ''; // Initialize message
+$message = ''; // Inicializamos variable mensaje generico
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // Cuando se pulsa en enviar formulario
     $user['email']  = $_POST['email'];                        // Obtenemos mail
     $user['asunto']   = $_POST['asunto'];                     // Obtenemos asunto
