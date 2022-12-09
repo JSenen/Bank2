@@ -131,6 +131,22 @@ p.success {
 
 }
 
+.account_page{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+table {
+    margin: 25px auto;
+    padding: 20px;
+    border: 5px solid #ccc;
+    width: 500px;
+    background: #eee;
+}
+th, td {
+    font-size: large;
+}
+
 
 .footer--container {
     display: flex;

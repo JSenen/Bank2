@@ -4,7 +4,7 @@ require_once('./domain/Account.php');
 
 //Creamos un cliente y cuentas de prueba
 $accounts = [new Account('ES3045678912','Debito', 1267.5),
-             new Account('ES0937568235','Inversion',3487.67)];
+    new Account('ES0937568235','Inversion',3487.67)];
 $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",$accounts);
 ?>
 <form method="post" action="" name="signin-form">
@@ -27,11 +27,14 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
 
 
+
+
     if ($username == $costumer1->name && $password == $costumer1->password) {
         echo '<div class="message_login"><div><p class="success"><a href="account.php">LOGIN CORRECTO pulse aqui</a></p></div></div></p>';
         session_start(); //Inicio de sesion
-        $_SESSION['name'] = $costumer1->name; //Asociamos sesion al nombre de usuario
-        setcookie('BANK2_COKKIE','',86400);
+        //Asociamos sesion al nombre de usuario
+        $_SESSION['name'] = $costumer1->name; //Damos nombre de usuario como valor de una campo de session
+        setcookie('BANK2_COKKIE','',86400); //Establecemos una cokkie de 1 dia
     }else{
         session_write_close(); //Borramos sesiones anteriores
         echo '<div class="message_login"><div><p class="error">LOGIN INCORRECTO</p></div></div></p>';
