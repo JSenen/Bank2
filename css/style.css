@@ -1,0 +1,123 @@
+/* INICIO*/
+
+:root {
+    --fuente: 'IBM Plex Sans Thai Looped', sans-serif;
+    --primario:#784D3C;
+    --claro:#afadad;
+    --blanco:#FFFFFF;
+    --negro:#000000;
+    --rojo:#ee0d0d;
+    --bluelight:#0deedf;
+
+
+}
+
+html {
+    box-sizing: border-box; /* Border,Padding,...no afecte ancho de los elementos*/
+    font-size: 62.5%; /*1rem = 10px*/
+    font-family: var(--fuente);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color:var(--blanco);
+    margin-left: 3rem;
+    font-family: var(--fuente); 
+    font-size: 1.75rem;
+}
+
+.resultado_edad a {
+    text-decoration: none;
+    color:var(--rojo);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: var(--fuente);
+    font-size: 1.75rem;
+
+
+
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--rojo);
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primario);
+    font-weight: 700;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/Fondo.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;  
+    
+}
+.header p {
+    font-size:2rem;
+    color: var(--blanco);
+}
+.header span {
+    color: var(--blanco);
+}
+
+
+ .navegacion {
+    background-color: var(--negro);
+    padding: 2rem;
+}
+.navegacion--activo {
+    color: var(--bluelight);
+}
+.navegacion a:hover {
+    color: var(--claro);
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+}
+.intro_container {
+    display:inline-block;
+    padding: 2rem;
+    align-content: center;
+    font-size: large;
+    margin-top: 10rem;
+}
+
+
+.footer--container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40rem;
+
+    align-items: center;
+    text-align: center;
+    background-color: #1f839c;
+}
+
+
+
+
+
