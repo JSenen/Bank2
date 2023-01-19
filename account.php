@@ -1,9 +1,9 @@
 <?php
-include './domain/Customer.php';
-include './domain/Account.php';
+include './model/Customer.php';
+include './model/Account.php';
 
-include './include/header.php'; //Incluimos cabecera
-include './include/nav.php';    //Incluimos menu navegación
+include './view/header.php'; //Incluimos cabecera
+include './view/nav.php';    //Incluimos menu navegación
 
 //Al trabajar sin base de datos, usamos los mismos objetos que el inicio de sesion.
 $accounts = [new Account('ES3045678912','Debito', 1267.5),
@@ -42,7 +42,7 @@ $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",
 </div>
 
 <?php
-include "./include/footer.php";
+include "./view/footer.php";
 ?>
 
 

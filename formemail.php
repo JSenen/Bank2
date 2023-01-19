@@ -1,12 +1,12 @@
 <?php
 
-include './domain/Customer.php';
-include './domain/Account.php';
+include './model/Customer.php';
+include './model/Account.php';
 
-include './include/header.php';
-include './include/nav.php';
-include './include/sendmail.php'; //Función para enviar email
-require './include/validate.php'; //Incluimos funcion validar
+include './view/header.php';
+include './view/nav.php';
+include './controller/sendmail.php'; //Función para enviar email
+require './controller/validate.php'; //Incluimos funcion validar
 
 
 //Al trabajar sin base de datos, usamos los mismos objetos que el inicio de sesion.
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                   // Cuando se pulsa
 
 ?>
 <?php
-include "./include/footer.php";
+include "./view/footer.php";
 ?>
 
 
