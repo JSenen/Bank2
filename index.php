@@ -1,6 +1,6 @@
 <?php
 
-include './include/header.php';
-include './include/session.php';
-include "./include/footer.php";
+include './view/header.php';
+include './controller/session.php';
+include "./view/footer.php";
 ?>

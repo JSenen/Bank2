@@ -1,12 +1,13 @@
 <?php
-require_once('./domain/Customer.php');
-require_once('./domain/Account.php');
+require_once('./model/Customer.php');
+require_once('./model/Account.php');
 
 //Creamos un cliente y cuentas de prueba
 $accounts = [new Account('ES3045678912','Debito', 1267.5),
     new Account('ES0937568235','Inversion',3487.67)];
 $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",$accounts);
 ?>
+
 <!-- FORMULARIO DE LOGIN -->
 <form method="post" action="" name="signin-form">
     <div class="form-element">
@@ -19,8 +20,8 @@ $costumer1 = new Customer('User','userfirst','userlast','juan@email.com',"1111",
     </div>
     <button type="submit" name="login" value="login">Log In</button>
 </form>
-<?php
 
+<?php
 //Validamos el login del formulario
 if (isset($_POST['login'])) {
 
@@ -39,7 +40,6 @@ if (isset($_POST['login'])) {
         echo '<div class="message_login"><div><p class="error">LOGIN INCORRECTO</p></div></div></p>';
     }
 }
-
 
 
 ?>
