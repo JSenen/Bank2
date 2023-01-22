@@ -16,4 +16,4 @@ Otras funcionalidades (1 pto cada una, opcionales para el 25/01/2023)
 4. Validación de campos ✅
 5. Uso de cookies ✅
 6. Manejo de errores
-6. envío de mail ✅
+7. envío de mail ✅
